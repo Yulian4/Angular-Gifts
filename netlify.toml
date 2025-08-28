@@ -1,0 +1,12 @@
+[build]
+  # Comando para construir la app Angular
+  command = "ng build --configuration production"
+
+  # Directorio donde Netlify buscará los archivos listos para producción
+  publish = "dist/mi-proyecto-angular"  # Asegúrate de que el nombre coincida con tu proyecto en 'dist'
+
+# Redirecciones en caso de usar rutas en Angular
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
