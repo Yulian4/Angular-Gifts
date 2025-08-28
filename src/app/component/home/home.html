@@ -1,0 +1,6 @@
+<main>
+  <ng-container *ngIf="gifs$ | async as r; else loader">
+    <app-gif-card *ngFor="let g of r.data" [gif]="g"></app-gif-card>
+  </ng-container>
+  <ng-template #loader><p>Cargando...</p></ng-template>
+</main>
